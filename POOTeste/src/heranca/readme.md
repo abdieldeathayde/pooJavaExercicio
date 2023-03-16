@@ -1,0 +1,2 @@
+#Projeto indicado para ser realizado que aborda o tema de Programação Orientada e Objetos em Java
+##foram criadas as classes Aluno, Main, Pessoa e Professor e no main criei objetos dessas classes. Uitlizei Arraylist para guardar os valores
