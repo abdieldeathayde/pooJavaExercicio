@@ -10,6 +10,7 @@ public class Aluno extends Pessoa {
 	
 	List<Aluno> alunos;
 	
+	
 	public Aluno(String _nome, String _sobrenome, String _endereco, char _sexo, String matricula, int frequencia, String status) {
 		super(_nome, _sobrenome, _endereco, _sexo);
 		this.matricula = matricula;
@@ -36,7 +37,46 @@ public class Aluno extends Pessoa {
 		
 //		= new Aluno(nome, sobrenome, endereco, sexo, matricula, frequencia, status);
 	}
+
 	
+	
+	public String getMatricula() {
+		return matricula;
+	}
+
+
+
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
+	}
+
+
+
+	public int getFrequencia() {
+		return frequencia;
+	}
+
+
+
+	public void setFrequencia(int frequencia) {
+		this.frequencia = frequencia;
+	}
+
+
+
+	public String getStatus() {
+		return status;
+	}
+
+
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	
+
+
 	public List<Aluno> getAluno() {
 		if (alunos == null) {
 			alunos = new ArrayList<Aluno>();
