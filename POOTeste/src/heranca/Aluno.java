@@ -8,6 +8,8 @@ public class Aluno extends Pessoa {
 	int frequencia;
 	String status;
 	
+	List<Aluno> alunos;
+	
 	public Aluno(String _nome, String _sobrenome, String _endereco, char _sexo, String matricula, int frequencia, String status) {
 		super(_nome, _sobrenome, _endereco, _sexo);
 		this.matricula = matricula;
@@ -15,13 +17,31 @@ public class Aluno extends Pessoa {
 		this.status = status;
 	}
 	
-	void cadastraAluno(String nome, String sobrenome, String endereco, char sexo, String matricula, int frequencia, String status) {
-		List<Aluno> aluno2 = new ArrayList<>();
-		aluno2.addAll("Abdiel", "Athayde", "Minas Gerais", 'F', "201710002356", 100, "Reprovado");
+	
+
+	public Aluno cadastraAluno(String matricula, int frequencia, String status) {
+		Aluno aluno2 = new Aluno("Isaias", "Silveira", "Parana", 'M', "202010002178", 100, "Aprovado");
+		
+		if (aluno2.nome == null) {
+			throw new NullPointerException("Nome não pode ser nulo");
+		}
+		getAluno().add(aluno2);
+		return aluno2;
+
+		//		List<Pessoa> aluno2 = new ArrayList<>();
+		
+//		aluno2.addAll("Abdiel", "Athayde", "Minas Gerais", 'M', "201710002356", 100, "Reprovado");
 //		List<Pessoa> pessoa2 = new ArrayList<>();
 //		pessoa2.add()
 		
 //		= new Aluno(nome, sobrenome, endereco, sexo, matricula, frequencia, status);
+	}
+	
+	public List<Aluno> getAluno() {
+		if (alunos == null) {
+			alunos = new ArrayList<Aluno>();
+		}
+		return alunos;
 	}
 	
 

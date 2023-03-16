@@ -1,5 +1,7 @@
 package heranca;
 
+import heranca.*;
+
 public class Main {
 	public static void main(String[] args) {
 		Pessoa pessoa = new Pessoa("Abdiel", "Athayde", "Blumenau", 'M');
@@ -10,12 +12,26 @@ public class Main {
 		System.out.println("nome do professor: " + professor.nome + " sobrenome: " + professor.sobrenome + " endereco: " + professor.endereco + " sexo:  " + professor.sexo + "\nsalário: " + professor.Salario + " disciplina: " + professor.Disciplina + " quantidade de matérias: " + professor.QuantidadeMaterias);
 		Aluno aluno = new Aluno("Maria", "Azevedo", "São Paulo", 'F', "202310002398", 100, "Aprovado");
 		System.out.println("Nome estudante: " + aluno.nome + " sobrenome: " + aluno.sobrenome + " endereco: " + aluno.endereco + " sexo: " + aluno.sexo + " matricula: " + aluno.matricula + " frequência: " + aluno.frequencia + " status: " + aluno.status);
-		Aluno aluno2.cadastraAluno(null, null, null, 0, null, 0, null);
-	}
-
-	private static void cadastraAluno(String string, String string2, String string3, char c, String string4, int i,
-			String string5) {
-		// TODO Auto-generated method stub
 		
+		Aluno aluno2 = new Aluno();
+		aluno2.matricula = "202010002178";
+		aluno2.frequencia = 100;
+		aluno2.status = "Reprovado";
+		aluno2.nome = "Isaias";
+		aluno2.sobrenome = "Silveira";
+		aluno2.endereco = "Parana";
+		aluno2.sexo = 'M';
+
+
+
+		// Aluno aluno2 = (Aluno) aluno2.getAlunos();
+		System.out.println(aluno2);
+
+		try {
+			aluno2.cadastraAluno("201910004597", 100, "Aprovado");
+			System.out.println("Aluno adicionado com sucesso!");
+		} catch(Exception e) {
+			System.err.println("Houve um erro ao adicionar aluno: " + e.getMessage());
+		}
 	}
 }
